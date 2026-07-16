@@ -94,6 +94,12 @@ GA4管理 → プロパティ(544663182) → プロパティのアクセス管�
   （Firebase登録/Analytics.gd/MPシークレット=GA4 UI自動化で作成/export include_filter修正）。
   Flutter5本(merge 1.1.6/hunter 1.0.9/iromaze 1.1.3/match 1.0.3/stacks 1.0.3)+crowd 1.3を
   build→upload→App PrivacyにANALYTICS行publish→審査提出。tycoon/war=未公開のためスキップ。
+- 2026-07-17: **war対応**（7/10にLIVE化していたのに計測漏れ→Discord日報カバレッジ監査で発覚）。
+  Firebase登録(appId 1:403465150712:ios:8c0deacc04ecf3db7d1b0d / stream 15271478347)→Analytics.gd移植→
+  MPシークレット(GA4 UI自動化)→v1.1(8)提出済み(WAITING_FOR_REVIEW)。debug validation+/mp/collect 204+
+  シークレット帰属UI照合まで確認。**GA4 realtimeは新規ストリームだと即時に出ない**（arenaの実イベントは
+  同時刻に見えていた）→着弾最終確認は翌日以降の標準レポート/DAU日報で。
+  残りの未計測=未公開のみ（tycoon/block/screw等。公開時に下のテンプレを適用）。
 
 ## Godot新作に計測を足す手順（テンプレ）
 1. Firebase iosApps登録(API可) → appId取得
